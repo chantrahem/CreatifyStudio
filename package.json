@@ -1,0 +1,27 @@
+{
+  "name": "creatifystudio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "npx tailwindcss -i ./src/input.css -o ./css/style.css --watch",
+    "build-css-prod": "npx tailwindcss -i ./src/input.css -o ./css/style.css --minify",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chantrahem/CreatifyStudio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chantrahem/CreatifyStudio/issues"
+  },
+  "homepage": "https://github.com/chantrahem/CreatifyStudio#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss-cli": "^11.0.1",
+    "tailwindcss": "^3.4.18"
+  }
+}
