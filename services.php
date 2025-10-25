@@ -75,7 +75,7 @@ include 'includes/header.php';
 <section class="py-20 bg-gray-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16 animate-on-scroll">
-            <h2 class="text-3xl font-bold text-gray-900 mb-4">Why Choose CreatifyStudio?</h2>
+                        <h2 class="text-3xl font-bold text-gray-900 mb-4">Why Choose QRMMS?</h2>
             <p class="text-xl text-gray-600">What sets us apart in the digital landscape</p>
         </div>
         
@@ -198,9 +198,9 @@ include 'includes/header.php';
                     </tr>
                     <tr class="bg-gray-50">
                         <td class="px-6 py-4 font-medium text-gray-900">Starting Price</td>
-                        <td class="px-6 py-4 text-center text-gradient font-bold">$999</td>
-                        <td class="px-6 py-4 text-center text-gradient font-bold">$299</td>
-                        <td class="px-6 py-4 text-center text-gradient font-bold">$9.99/mo</td>
+                        <td class="px-6 py-4 text-center text-gradient font-bold"><?php echo $services['web-development']['pricing_from']; ?></td>
+                        <td class="px-6 py-4 text-center text-gradient font-bold"><?php echo $services['graphic-design']['pricing_from']; ?></td>
+                        <td class="px-6 py-4 text-center text-gradient font-bold"><?php echo $services['domain-hosting']['pricing_from']; ?></td>
                     </tr>
                 </tbody>
             </table>

@@ -73,7 +73,7 @@ $selected_service = $_GET['service'] ?? '';
 
 // Set page variables
 $page_title = "Contact Us";
-$meta_description = "Get in touch with CreatifyStudio for your web development, graphic design, and hosting needs. Free consultation and competitive pricing.";
+$meta_description = "Get in touch with QRMMS for your web development, graphic design, and hosting needs. Free consultation and competitive pricing.";
 
 // Now safe to include header
 include 'includes/header.php';
@@ -166,6 +166,10 @@ include 'includes/header.php';
                                     name="service"
                                     class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent transition-colors">
                                 <option value="">Select a service...</option>
+                                <option value="qr-menu-system" 
+                                        <?php echo ($selected_service === 'qr-menu-system' || ($form_data['service'] ?? '') === 'qr-menu-system') ? 'selected' : ''; ?>>
+                                    🌟 QR Menu Management System (Featured)
+                                </option>
                                 <?php foreach ($services as $key => $service): ?>
                                     <option value="<?php echo $key; ?>" 
                                             <?php echo ($selected_service === $key || ($form_data['service'] ?? '') === $key) ? 'selected' : ''; ?>>

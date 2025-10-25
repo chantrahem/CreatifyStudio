@@ -19,12 +19,12 @@ $email_config = [
     
     // Email settings
     'from_email' => 'your-email@gmail.com', // Your email
-    'from_name' => 'CreatifyStudio Contact Form',
-    'reply_to' => 'contact@creatifystudio.com',
+    'from_name' => 'QRMMS Contact Form',
+    'reply_to' => 'contact@qrmms.com',
     
     // Recipient
-    'to_email' => 'contact@creatifystudio.com',
-    'to_name' => 'CreatifyStudio Team'
+    'to_email' => 'contact@qrmms.com',
+    'to_name' => 'QRMMS Team'
 ];
 
 /**
@@ -134,7 +134,7 @@ function generateEmailHTML($form_data) {
         <div class="container">
             <div class="header">
                 <h2>New Contact Form Submission</h2>
-                <p>CreatifyStudio Website</p>
+                <p>QRMMS Website</p>
             </div>
             <div class="content">
                 <div class="field">
@@ -172,7 +172,7 @@ function generateEmailHTML($form_data) {
  */
 function generateEmailText($form_data) {
     $text = "NEW CONTACT FORM SUBMISSION\n";
-    $text .= "CreatifyStudio Website\n";
+    $text .= "QRMMS Website\n";
     $text .= str_repeat("=", 40) . "\n\n";
     
     $text .= "Name: " . $form_data['name'] . "\n";

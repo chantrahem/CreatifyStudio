@@ -1,24 +1,24 @@
 <?php
-// Configuration file for CreatifyStudio
+// Configuration file for QRMMS
 
 // Site Information
-define('SITE_NAME', 'CreatifyStudio');
-define('SITE_TAGLINE', 'Creative Web Solutions & Design Services');
-define('SITE_URL', 'https://creatifystudio.com');
-define('SITE_EMAIL', 'creatifystudio168@gmail.com');
+define('SITE_NAME', 'QRMMS');
+define('SITE_TAGLINE', 'Quality Resource Management & Marketing Solutions');
+define('SITE_URL', 'https://www.qrmms.com');
+define('SITE_EMAIL', 'contact@qrmms.com');
 define('SITE_PHONE', '+855 69 71 21 21');
 
 // Company Information
-define('COMPANY_NAME', 'CreatifyStudio');
+define('COMPANY_NAME', 'QRMMS');
 define('COMPANY_ADDRESS', 'Siem Reap, Kingdom of Cambodia');
 define('COMPANY_FOUNDED', '2020');
 
 // Social Media Links
-define('SOCIAL_FACEBOOK', 'https://facebook.com/creatifystudio');
-define('SOCIAL_TWITTER', 'https://twitter.com/creatifystudio');
-define('SOCIAL_INSTAGRAM', 'https://instagram.com/creatifystudio');
-define('SOCIAL_LINKEDIN', 'https://linkedin.com/company/creatifystudio');
-define('SOCIAL_GITHUB', 'https://github.com/creatifystudio');
+define('SOCIAL_FACEBOOK', 'https://facebook.com/qrmms');
+define('SOCIAL_TWITTER', 'https://twitter.com/qrmms');
+define('SOCIAL_INSTAGRAM', 'https://instagram.com/qrmms');
+define('SOCIAL_LINKEDIN', 'https://linkedin.com/company/qrmms');
+define('SOCIAL_GITHUB', 'https://github.com/qrmms');
 
 // Services Configuration
 $services = [
@@ -69,9 +69,30 @@ $services = [
     ]
 ];
 
+// Featured QR Menu System Configuration
+$qr_menu_system = [
+    'title' => 'QR Menu Management System',
+    'icon' => 'qrcode',
+    'description' => 'Digital menu platform for restaurants, cafes, and bars that saves money on menu printing and graphic design',
+    'features' => [
+        'Clean & Responsive Display',
+        'Easy ON/OFF Items Control',
+        'Desktop & Mobile Backend',
+        'Real-time Menu Updates',
+        'QR Code Generation',
+        'Manage Menu Anywhere, Anytime',
+        'Post Sale',
+        'Print Receipt',
+        'Menu in Multiple Languages (Khmer, English, Chinese)'
+    ],
+    'technologies' => ['QR Code Technology', 'Mobile Responsive', 'Cloud-based', 'Real-time Updates'],
+    'pricing_from' => 'Contact for Demo'
+];
+
 // Navigation Menu
 $navigation = [
     'Home' => '/',
+    'QR Menu System' => '/services/qr-menu-system.php',
     'Services' => [
         'All Services' => '/services.php',
         'divider' => true,
@@ -90,7 +111,7 @@ $testimonials = [
         'name' => 'Sarah Johnson',
         'company' => 'TechStart Inc.',
         'position' => 'CEO',
-        'message' => 'CreatifyStudio transformed our online presence with a stunning website that perfectly captures our brand. Their attention to detail and professionalism exceeded our expectations.',
+        'message' => 'QRMMS transformed our online presence with a stunning website that perfectly captures our brand. Their attention to detail and professionalism exceeded our expectations.',
         'rating' => 5,
         'image' => 'testimonial-1.jpg'
     ],
@@ -115,37 +136,59 @@ $testimonials = [
 // Portfolio Projects
 $portfolio = [
     [
-        'title' => 'E-commerce Fashion Store',
-        'category' => 'web-development',
-        'client' => 'StyleHub',
-        'description' => 'Modern online fashion store with inventory management and payment integration',
-        'technologies' => ['PHP', 'Laravel', 'MySQL', 'Stripe API'],
-        'image' => 'portfolio-ecommerce.jpg',
-        'url' => '#'
+        'client' => 'Snaca Cafe',
+        'type' => 'Coffee Shop',
+        'category' => 'qr-menu-system web-development graphic-design',
+        'image' => 'portfolio-snacacafe.jpg',
+        'url' => 'https://snacacafe.com'
     ],
     [
-        'title' => 'Restaurant Brand Identity',
-        'category' => 'graphic-design',
-        'client' => 'Bella Vista',
-        'description' => 'Complete brand identity package including logo, menu design, and marketing materials',
-        'technologies' => ['Adobe Illustrator', 'Photoshop', 'InDesign'],
-        'image' => 'portfolio-restaurant.jpg',
-        'url' => '#'
+        'client' => 'Miss Salmon',
+        'type' => 'Japanese Food',
+        'category' => 'qr-menu-system web-development graphic-design',
+        'image' => 'portfolio-misssalmon.jpg',
+        'url' => 'https://misssalmon.com'
     ],
     [
-        'title' => 'Corporate Website',
+        'client' => 'Mlob Mean Restaurant',
+        'type' => 'Local Restaurant',
+        'category' => 'qr-menu-system web-development graphic-design',
+        'image' => 'portfolio-mlobmean.jpg',
+        'url' => 'https://mlobmean.com'
+    ],
+    [
+        'client' => 'Hillocks Hotel & Spa',
+        'type' => 'Hotel & Resort',
         'category' => 'web-development',
-        'client' => 'InnovateTech',
-        'description' => 'Professional corporate website with CMS and client portal',
-        'technologies' => ['WordPress', 'Custom PHP', 'JavaScript'],
-        'image' => 'portfolio-corporate.jpg',
-        'url' => '#'
+        'image' => 'portfolio-hillockshotel.jpg',
+        'url' => 'https://hillockshotel.com'
+    ],
+    [
+        'client' => 'Takak Villas',
+        'type' => 'Apartment',
+        'category' => 'web-development',
+        'image' => 'portfolio-takakvillas.jpg',
+        'url' => 'https://takakvillas.com'
+    ],
+    [
+        'client' => 'Sanna Villa',
+        'type' => 'Private Villa',
+        'category' => 'web-development',
+        'image' => 'portfolio-sannavilla.jpg',
+        'url' => 'https://sannavilla.com'
+    ],
+    [
+        'client' => 'Siem Reap Quadbike Adevnture',
+        'type' => 'Quadbike Rental',
+        'category' => 'web-development',
+        'image' => 'portfolio-srquadbike.jpg',
+        'url' => 'https://srquadbikeadventure.com'
     ]
 ];
 
 // Contact Form Settings
 define('CONTACT_EMAIL', SITE_EMAIL);
-define('CONTACT_SUBJECT_PREFIX', '[CreatifyStudio Contact] ');
+define('CONTACT_SUBJECT_PREFIX', '[QRMMS Contact] ');
 
 // Error and Success Messages
 $messages = [
@@ -156,6 +199,16 @@ $messages = [
 ];
 
 // Helper Functions
+function isServicesActive() {
+    $servicesPages = [
+        'services.php',
+        'services/web-development.php',
+        'services/graphic-design.php',
+        'services/domain-hosting.php'
+    ];
+    $current = getCurrentPage();
+    return in_array($current, $servicesPages) ? 'active' : '';
+}
 function getCurrentPage() {
     $page = $_SERVER['REQUEST_URI'];
     $page = parse_url($page, PHP_URL_PATH);

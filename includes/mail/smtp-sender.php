@@ -1,6 +1,6 @@
 <?php
 /**
- * Simple SMTP Email Sender for CreatifyStudio
+ * Simple SMTP Email Sender for QRMMS
  * Works without PHPMailer using PHP sockets
  */
 
@@ -15,7 +15,7 @@ function sendEmailViaSMTP($form_data) {
         'username' => 'alertemail168@gmail.com',
         'password' => 'skozmvmlolzuulrf',
         'from_email' => 'alertemail168@gmail.com',
-        'from_name' => 'CreatifyStudio Contact Form',
+        'from_name' => 'QRMMS Contact Form',
         'to_email' => SITE_EMAIL // Send to configured site email
     ];
     

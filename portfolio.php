@@ -24,14 +24,14 @@ include 'includes/header.php';
             <button class="filter-btn active px-6 py-3 rounded-full font-semibold transition-all" data-filter="all">
                 All Projects
             </button>
+            <button class="filter-btn px-6 py-3 rounded-full font-semibold transition-all" data-filter="qr-menu-system">
+                QR Menu System
+            </button>
             <button class="filter-btn px-6 py-3 rounded-full font-semibold transition-all" data-filter="web-development">
                 Web Development
             </button>
             <button class="filter-btn px-6 py-3 rounded-full font-semibold transition-all" data-filter="graphic-design">
                 Graphic Design
-            </button>
-            <button class="filter-btn px-6 py-3 rounded-full font-semibold transition-all" data-filter="domain-hosting">
-                Hosting Solutions
             </button>
         </div>
     </div>
@@ -42,10 +42,15 @@ include 'includes/header.php';
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="portfolio-grid">
             
-            <!-- E-commerce Project -->
-            <div class="portfolio-item animate-on-scroll" data-category="web-development">
+            <?php foreach ($portfolio as $index => $project): ?>
+            
+            <!-- <?php echo htmlspecialchars($project['client']); ?> -->
+            <div class="portfolio-item animate-on-scroll" data-category="<?php echo htmlspecialchars($project['category']); ?>">
                 <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all group">
-                    <div class="h-64 bg-gradient-to-br from-blue-400 to-purple-600 relative overflow-hidden">
+                    <div class="h-64 relative overflow-hidden">
+                        <img src="assets/images/<?php echo htmlspecialchars($project['image']); ?>" 
+                             alt="<?php echo htmlspecialchars($project['client']); ?>" 
+                             class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
                         <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                             <div class="text-center text-white">
                                 <i class="fas fa-external-link-alt text-2xl mb-2"></i>
@@ -53,199 +58,39 @@ include 'includes/header.php';
                             </div>
                         </div>
                         <div class="absolute bottom-4 left-4">
-                            <span class="bg-white bg-opacity-90 text-purple-600 px-3 py-1 rounded-full text-sm font-semibold">
-                                E-commerce
+                            <span class="bg-white bg-opacity-90 text-gray-800 px-3 py-1 rounded-full text-xs font-semibold shadow-lg">
+                                <?php echo htmlspecialchars($project['type']); ?>
                             </span>
                         </div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">StyleHub Fashion Store</h3>
-                        <p class="text-gray-600 mb-4">Modern e-commerce platform with advanced inventory management, payment integration, and responsive design.</p>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2"><?php echo htmlspecialchars($project['client']); ?></h3>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">PHP</span>
-                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">Laravel</span>
-                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">MySQL</span>
-                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">Stripe</span>
+                            <?php 
+                            $categoryBadges = [
+                                'qr-menu-system' => ['label' => 'QR Menu System', 'color' => 'bg-green-100 text-green-800'],
+                                'web-development' => ['label' => 'Web Development', 'color' => 'bg-blue-100 text-blue-800'],
+                                'graphic-design' => ['label' => 'Graphic Design', 'color' => 'bg-purple-100 text-purple-800']
+                            ];
+                            $categories = explode(' ', $project['category']);
+                            foreach ($categories as $cat):
+                                $catInfo = isset($categoryBadges[$cat]) ? $categoryBadges[$cat] : ['label' => 'Other', 'color' => 'bg-gray-100 text-gray-800'];
+                            ?>
+                                <span class="<?php echo $catInfo['color']; ?> px-3 py-1 rounded text-sm font-medium">
+                                    <?php echo $catInfo['label']; ?>
+                                </span>
+                            <?php endforeach; ?>
                         </div>
-                        <div class="flex justify-between items-center">
-                            <span class="text-sm text-gray-500">Client: StyleHub</span>
-                            <a href="#" class="text-purple-600 hover:text-purple-700 font-semibold">
-                                View Details <i class="fas fa-arrow-right ml-1"></i>
+                        <div class="flex justify-center items-center">
+                            <a href="<?php echo htmlspecialchars($project['url']); ?>" target="_blank" class="text-purple-600 hover:text-purple-700 font-semibold transition-colors">
+                                View Project <i class="fas fa-arrow-right ml-1"></i>
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
             
-            <!-- Restaurant Branding -->
-            <div class="portfolio-item animate-on-scroll" data-category="graphic-design">
-                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all group">
-                    <div class="h-64 bg-gradient-to-br from-orange-400 to-red-600 relative overflow-hidden">
-                        <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <div class="text-center text-white">
-                                <i class="fas fa-external-link-alt text-2xl mb-2"></i>
-                                <p class="font-semibold">View Project</p>
-                            </div>
-                        </div>
-                        <div class="absolute bottom-4 left-4">
-                            <span class="bg-white bg-opacity-90 text-red-600 px-3 py-1 rounded-full text-sm font-semibold">
-                                Branding
-                            </span>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">Bella Vista Restaurant</h3>
-                        <p class="text-gray-600 mb-4">Complete brand identity package including logo design, menu layouts, and marketing materials.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-orange-100 text-orange-800 px-2 py-1 rounded text-sm">Illustrator</span>
-                            <span class="bg-orange-100 text-orange-800 px-2 py-1 rounded text-sm">Photoshop</span>
-                            <span class="bg-orange-100 text-orange-800 px-2 py-1 rounded text-sm">InDesign</span>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <span class="text-sm text-gray-500">Client: Bella Vista</span>
-                            <a href="#" class="text-purple-600 hover:text-purple-700 font-semibold">
-                                View Details <i class="fas fa-arrow-right ml-1"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Corporate Website -->
-            <div class="portfolio-item animate-on-scroll" data-category="web-development">
-                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all group">
-                    <div class="h-64 bg-gradient-to-br from-green-400 to-blue-600 relative overflow-hidden">
-                        <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <div class="text-center text-white">
-                                <i class="fas fa-external-link-alt text-2xl mb-2"></i>
-                                <p class="font-semibold">View Project</p>
-                            </div>
-                        </div>
-                        <div class="absolute bottom-4 left-4">
-                            <span class="bg-white bg-opacity-90 text-blue-600 px-3 py-1 rounded-full text-sm font-semibold">
-                                Corporate
-                            </span>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">InnovateTech Solutions</h3>
-                        <p class="text-gray-600 mb-4">Professional corporate website with custom CMS, client portal, and integrated documentation system.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-sm">WordPress</span>
-                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-sm">Custom PHP</span>
-                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-sm">JavaScript</span>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <span class="text-sm text-gray-500">Client: InnovateTech</span>
-                            <a href="#" class="text-purple-600 hover:text-purple-700 font-semibold">
-                                View Details <i class="fas fa-arrow-right ml-1"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Mobile App Design -->
-            <div class="portfolio-item animate-on-scroll" data-category="graphic-design">
-                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all group">
-                    <div class="h-64 bg-gradient-to-br from-purple-400 to-pink-600 relative overflow-hidden">
-                        <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <div class="text-center text-white">
-                                <i class="fas fa-external-link-alt text-2xl mb-2"></i>
-                                <p class="font-semibold">View Project</p>
-                            </div>
-                        </div>
-                        <div class="absolute bottom-4 left-4">
-                            <span class="bg-white bg-opacity-90 text-pink-600 px-3 py-1 rounded-full text-sm font-semibold">
-                                UI/UX
-                            </span>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">FitTracker Mobile App</h3>
-                        <p class="text-gray-600 mb-4">Complete UI/UX design for fitness tracking mobile application with modern interface and user flow.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-sm">Figma</span>
-                            <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-sm">Sketch</span>
-                            <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-sm">Prototyping</span>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <span class="text-sm text-gray-500">Client: FitTracker Inc.</span>
-                            <a href="#" class="text-purple-600 hover:text-purple-700 font-semibold">
-                                View Details <i class="fas fa-arrow-right ml-1"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Hosting Solution -->
-            <div class="portfolio-item animate-on-scroll" data-category="domain-hosting">
-                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all group">
-                    <div class="h-64 bg-gradient-to-br from-cyan-400 to-blue-600 relative overflow-hidden">
-                        <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <div class="text-center text-white">
-                                <i class="fas fa-external-link-alt text-2xl mb-2"></i>
-                                <p class="font-semibold">View Project</p>
-                            </div>
-                        </div>
-                        <div class="absolute bottom-4 left-4">
-                            <span class="bg-white bg-opacity-90 text-cyan-600 px-3 py-1 rounded-full text-sm font-semibold">
-                                Hosting
-                            </span>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">EduLearn Platform</h3>
-                        <p class="text-gray-600 mb-4">High-performance hosting solution for online learning platform serving 10,000+ students globally.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-cyan-100 text-cyan-800 px-2 py-1 rounded text-sm">VPS Hosting</span>
-                            <span class="bg-cyan-100 text-cyan-800 px-2 py-1 rounded text-sm">CDN</span>
-                            <span class="bg-cyan-100 text-cyan-800 px-2 py-1 rounded text-sm">SSL</span>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <span class="text-sm text-gray-500">Client: EduLearn</span>
-                            <a href="#" class="text-purple-600 hover:text-purple-700 font-semibold">
-                                View Details <i class="fas fa-arrow-right ml-1"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Startup Website -->
-            <div class="portfolio-item animate-on-scroll" data-category="web-development">
-                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all group">
-                    <div class="h-64 bg-gradient-to-br from-yellow-400 to-orange-600 relative overflow-hidden">
-                        <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <div class="text-center text-white">
-                                <i class="fas fa-external-link-alt text-2xl mb-2"></i>
-                                <p class="font-semibold">View Project</p>
-                            </div>
-                        </div>
-                        <div class="absolute bottom-4 left-4">
-                            <span class="bg-white bg-opacity-90 text-orange-600 px-3 py-1 rounded-full text-sm font-semibold">
-                                Startup
-                            </span>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">TechStart Landing</h3>
-                        <p class="text-gray-600 mb-4">Modern startup landing page with lead generation, analytics integration, and conversion optimization.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-sm">React</span>
-                            <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-sm">Node.js</span>
-                            <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-sm">MongoDB</span>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <span class="text-sm text-gray-500">Client: TechStart</span>
-                            <a href="#" class="text-purple-600 hover:text-purple-700 font-semibold">
-                                View Details <i class="fas fa-arrow-right ml-1"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <?php endforeach; ?>
             
         </div>
         
@@ -388,9 +233,9 @@ document.addEventListener('DOMContentLoaded', function() {
             updateFilterButtons(button);
             
             portfolioItems.forEach(item => {
-                const category = item.getAttribute('data-category');
+                const categories = item.getAttribute('data-category').split(' ');
                 
-                if (filter === 'all' || category === filter) {
+                if (filter === 'all' || categories.includes(filter)) {
                     item.style.display = 'block';
                     setTimeout(() => {
                         item.style.opacity = '1';

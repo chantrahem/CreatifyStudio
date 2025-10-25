@@ -1,6 +1,6 @@
 <?php
 $page_title = "About Us";
-$meta_description = "Learn about CreatifyStudio - a creative digital agency specializing in web development, graphic design, and hosting services. Meet our team and discover our story.";
+$meta_description = "Learn about QRMMS - a quality resource management and marketing solutions company specializing in web development, graphic design, and digital services. Meet our team and discover our story.";
 include 'includes/header.php';
 ?>
 
@@ -9,7 +9,7 @@ include 'includes/header.php';
     <div class="absolute inset-0 bg-black opacity-20"></div>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="text-center animate-on-scroll">
-            <h1 class="text-4xl md:text-5xl font-bold mb-6">About CreatifyStudio</h1>
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">About QRMMS</h1>
             <p class="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto">
                 We're passionate about creating digital solutions that help businesses thrive in the modern world
             </p>
@@ -24,7 +24,7 @@ include 'includes/header.php';
             <div class="animate-on-scroll">
                 <h2 class="text-3xl font-bold text-gray-900 mb-6">Our Story</h2>
                 <p class="text-lg text-gray-600 mb-6">
-                    Founded in <?php echo COMPANY_FOUNDED; ?>, CreatifyStudio began as a small team of passionate developers 
+                    Founded in <?php echo COMPANY_FOUNDED; ?>, QRMMS began as a small team of passionate professionals 
                     and designers with a simple mission: to help businesses succeed online with creative, 
                     effective digital solutions.
                 </p>
@@ -101,7 +101,7 @@ include 'includes/header.php';
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16 animate-on-scroll">
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Meet Our Team</h2>
-            <p class="text-xl text-gray-600">The talented people behind CreatifyStudio</p>
+            <p class="text-xl text-gray-600">The talented people behind QRMMS</p>
         </div>
         
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -110,12 +110,12 @@ include 'includes/header.php';
                 <div class="w-32 h-32 gradient-bg rounded-full flex items-center justify-center mx-auto mb-6">
                     <i class="fas fa-user text-white text-4xl"></i>
                 </div>
-                <h3 class="text-xl font-bold text-gray-900 mb-2">Alex Johnson</h3>
-                <p class="text-purple-600 font-semibold mb-3">Lead Developer</p>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Chantra</h3>
+                <p class="text-purple-600 font-semibold mb-3">Founder</p>
                 <p class="text-gray-600 mb-4">
-                    Full-stack developer with 8+ years of experience in web technologies and a passion for clean, efficient code.
+                    Visionary founder, full-stack developer, and systems administrator with 8+ years of experience. Expert in building robust web platforms and managing secure, scalable infrastructure.
                 </p>
-                <div class="flex justify-center space-x-4">
+                <!-- <div class="flex justify-center space-x-4">
                     <a href="#" class="text-gray-400 hover:text-purple-600 transition-colors">
                         <i class="fab fa-linkedin"></i>
                     </a>
@@ -125,7 +125,7 @@ include 'includes/header.php';
                     <a href="#" class="text-gray-400 hover:text-purple-600 transition-colors">
                         <i class="fab fa-twitter"></i>
                     </a>
-                </div>
+                </div> -->
             </div>
             
             <!-- Team Member 2 -->
@@ -133,12 +133,12 @@ include 'includes/header.php';
                 <div class="w-32 h-32 gradient-bg rounded-full flex items-center justify-center mx-auto mb-6">
                     <i class="fas fa-user text-white text-4xl"></i>
                 </div>
-                <h3 class="text-xl font-bold text-gray-900 mb-2">Sarah Martinez</h3>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Narin</h3>
                 <p class="text-purple-600 font-semibold mb-3">Creative Director</p>
                 <p class="text-gray-600 mb-4">
-                    Award-winning designer specializing in brand identity and user experience with a keen eye for detail.
+                    Specialist in graphic design, branding, and visual storytelling. Expert at crafting memorable brand identities and engaging user experiences.
                 </p>
-                <div class="flex justify-center space-x-4">
+                <!-- <div class="flex justify-center space-x-4">
                     <a href="#" class="text-gray-400 hover:text-purple-600 transition-colors">
                         <i class="fab fa-linkedin"></i>
                     </a>
@@ -148,7 +148,7 @@ include 'includes/header.php';
                     <a href="#" class="text-gray-400 hover:text-purple-600 transition-colors">
                         <i class="fab fa-dribbble"></i>
                     </a>
-                </div>
+                </div> -->
             </div>
             
             <!-- Team Member 3 -->
@@ -156,12 +156,12 @@ include 'includes/header.php';
                 <div class="w-32 h-32 gradient-bg rounded-full flex items-center justify-center mx-auto mb-6">
                     <i class="fas fa-user text-white text-4xl"></i>
                 </div>
-                <h3 class="text-xl font-bold text-gray-900 mb-2">Mike Thompson</h3>
-                <p class="text-purple-600 font-semibold mb-3">Systems Administrator</p>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Sophoun</h3>
+                <p class="text-purple-600 font-semibold mb-3">Sales & Marketing</p>
                 <p class="text-gray-600 mb-4">
-                    Infrastructure expert ensuring reliable hosting solutions and 24/7 system monitoring for optimal performance.
+                    Sales and marketing strategist focused on driving growth and building strong client relationships. Skilled in digital marketing and customer engagement.
                 </p>
-                <div class="flex justify-center space-x-4">
+                <!-- <div class="flex justify-center space-x-4">
                     <a href="#" class="text-gray-400 hover:text-purple-600 transition-colors">
                         <i class="fab fa-linkedin"></i>
                     </a>
@@ -171,7 +171,7 @@ include 'includes/header.php';
                     <a href="#" class="text-gray-400 hover:text-purple-600 transition-colors">
                         <i class="fab fa-twitter"></i>
                     </a>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -271,7 +271,7 @@ include 'includes/header.php';
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center animate-on-scroll">
         <h2 class="text-4xl font-bold mb-6">Ready to Work Together?</h2>
         <p class="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
-            Let's discuss how CreatifyStudio can help transform your digital presence
+            Let's discuss how QRMMS can help transform your digital presence
         </p>
         <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
             <a href="/contact.php" 

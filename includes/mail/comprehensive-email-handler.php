@@ -1,6 +1,6 @@
 <?php
 /**
- * Comprehensive Email Handler for CreatifyStudio
+ * Comprehensive Email Handler for QRMMS
  * Tries multiple methods to ensure email delivery
  */
 
@@ -56,8 +56,8 @@ function sendEmailWithPHPMailer($form_data) {
         $mail->Port = 587;
         
         // Recipients
-        $mail->setFrom('alertemail168@gmail.com', 'CreatifyStudio Contact Form');
-        $mail->addAddress(SITE_EMAIL, 'CreatifyStudio Team');
+        $mail->setFrom('alertemail168@gmail.com', 'QRMMS Contact Form');
+        $mail->addAddress(SITE_EMAIL, 'QRMMS Team');
         $mail->addReplyTo($form_data['email'], $form_data['name']);
         
         // Content
@@ -82,7 +82,7 @@ function sendEmailWithPHP($form_data) {
     $subject = 'New Contact Form Submission from ' . $form_data['name'];
     $message = generateEmailText($form_data);
     
-    $from_email = 'noreply@creatifystudio.com';
+    $from_email = 'noreply@qrmms.com';
     $headers = "From: " . $from_email . "\r\n";
     $headers .= "Reply-To: " . $form_data['email'] . "\r\n";
     $headers .= "X-Mailer: PHP/" . phpversion() . "\r\n";
@@ -158,7 +158,7 @@ function generateEmailHTML($form_data) {
         <div class="container">
             <div class="header">
                 <h1>📧 New Contact Form Submission</h1>
-                <p>CreatifyStudio Website</p>
+                <p>QRMMS Website</p>
             </div>
             <div class="content">
                 <div class="field">
@@ -202,7 +202,7 @@ function generateEmailHTML($form_data) {
  */
 function generateEmailText($form_data) {
     $text = "NEW CONTACT FORM SUBMISSION\n";
-    $text .= "CreatifyStudio Website\n";
+    $text .= "QRMMS Website\n";
     $text .= str_repeat("=", 50) . "\n\n";
     
     $text .= "Name: " . $form_data['name'] . "\n";

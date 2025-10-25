@@ -11,6 +11,11 @@ require_once 'config.php';
     <!-- Meta Description -->
     <meta name="description" content="<?php echo isset($meta_description) ? $meta_description : 'Professional web development, graphic design, domain and hosting services. Transform your business with creative digital solutions.'; ?>">
     
+    <!-- Prevent caching during development -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    
     <!-- Meta Keywords -->
     <meta name="keywords" content="web development, graphic design, domain registration, web hosting, website design, PHP development, responsive design, SEO">
     
@@ -72,8 +77,16 @@ require_once 'config.php';
             transition: all 0.3s ease;
         }
         .nav-link.active {
+        a.dropdown-link-active,
+        .services-dropdown-active {
+            color: #667eea !important;
+            border-left: 4px solid #764ba2 !important;
+            background: rgba(118,75,162,0.07) !important;
+        }
             color: #667eea;
             border-bottom: 2px solid #667eea;
+            border-left: 4px solid #764ba2;
+            background: rgba(118,75,162,0.07);
         }
         .nav-scrolled {
             background: rgba(255, 255, 255, 0.95);
@@ -85,6 +98,42 @@ require_once 'config.php';
             background: transparent;
             box-shadow: none;
         }
+        .rotate-180 {
+            transform: rotate(180deg);
+        }
+        .transition-transform {
+            transition: transform 0.2s ease-in-out;
+        }
+        #mobile-menu {
+            transition: all 0.3s ease-in-out;
+            position: relative;
+            z-index: 60;
+        }
+        @media (max-width: 767px) {
+            #mobile-menu.mobile-hidden {
+                display: none !important;
+            }
+            #mobile-menu:not(.mobile-hidden) {
+                display: block !important;
+            }
+        }
+        @media (min-width: 768px) {
+            #mobile-menu {
+                display: none !important;
+            }
+        }
+        
+        /* Ensure hamburger icon is always visible */
+        #mobile-menu-button svg {
+            display: block !important;
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+        
+        /* Prevent any hidden class from affecting the hamburger */
+        #mobile-menu-button svg:not(.hidden) {
+            display: block !important;
+        }
     </style>
 </head>
 <body class="bg-gray-50">
@@ -95,9 +144,7 @@ require_once 'config.php';
                 <!-- Logo -->
                 <div class="flex items-center">
                     <a href="/" class="flex items-center space-x-3">
-                        <div class="w-10 h-10 gradient-bg rounded-lg flex items-center justify-center">
-                            <i class="fas fa-palette text-white text-lg"></i>
-                        </div>
+                        <img src="/assets/images/favicon.ico" alt="QRMMS Logo" class="w-10 h-10">
                         <span class="text-xl font-bold text-gray-900"><?php echo SITE_NAME; ?></span>
                     </a>
                 </div>
@@ -108,17 +155,27 @@ require_once 'config.php';
                         <?php if (is_array($url)): ?>
                             <!-- Dropdown Menu for Services -->
                             <div class="relative group">
-                                <button class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors flex items-center">
+                                <button class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors flex items-center <?php echo isServicesActive(); ?>">
                                     <?php echo $name; ?>
                                     <i class="fas fa-chevron-down ml-1 text-xs"></i>
                                 </button>
+                            <!-- Add active class to Services parent if any subpage is active -->
+                            <script>
+                            document.addEventListener('DOMContentLoaded', function() {
+                                var servicesBtn = document.querySelector('.nav-link:contains("Services")');
+                                if (servicesBtn) {
+                                    servicesBtn.classList.add('<?php echo isServicesActive(); ?>');
+                                }
+                            });
+                            </script>
                                 <div class="absolute top-full left-0 mt-1 w-56 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                                     <?php foreach ($url as $subName => $subUrl): ?>
                                         <?php if ($subName === 'divider'): ?>
                                             <div class="border-t border-gray-200 my-1"></div>
                                         <?php else: ?>
-                                            <a href="<?php echo $subUrl; ?>" 
-                                               class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors first:rounded-t-lg last:rounded-b-lg">
+                                            <a href="<?php echo $subUrl; ?>"
+                                               class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors first:rounded-t-lg last:rounded-b-lg"
+                                               <?php if (isActivePage(ltrim($subUrl, '/'))) echo 'style="color:#667eea;border-left:4px solid #764ba2;background:rgba(118,75,162,0.07);"'; ?>>
                                                 <?php echo $subName; ?>
                                             </a>
                                         <?php endif; ?>
@@ -126,10 +183,18 @@ require_once 'config.php';
                                 </div>
                             </div>
                         <?php else: ?>
-                            <a href="<?php echo $url; ?>" 
-                               class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors <?php echo isActivePage(strtolower($name)); ?>">
-                                <?php echo $name; ?>
-                            </a>
+                            <?php if ($name === 'QR Menu System'): ?>
+                                <a href="<?php echo $url; ?>" 
+                                   class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-blue-700 hover:to-purple-700 transition-all transform hover:scale-105 flex items-center <?php echo isActivePage(basename($url)); ?>">
+                                    <i class="fas fa-star text-yellow-300 mr-2 text-xs"></i>
+                                    <?php echo $name; ?>
+                                </a>
+                            <?php else: ?>
+                                <a href="<?php echo $url; ?>" 
+                                   class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors <?php echo ($url === '/' ? isActivePage('home') : isActivePage(basename($url))); ?>">
+                                    <?php echo $name; ?>
+                                </a>
+                            <?php endif; ?>
                         <?php endif; ?>
                     <?php endforeach; ?>
                     
@@ -143,6 +208,7 @@ require_once 'config.php';
                 <div class="md:hidden flex items-center">
                     <button id="mobile-menu-button" 
                             class="text-gray-700 hover:text-blue-600 focus:outline-none focus:text-blue-600 transition-colors">
+                        <!-- Only hamburger icon - no X icon -->
                         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
@@ -152,8 +218,8 @@ require_once 'config.php';
         </div>
         
         <!-- Mobile Navigation -->
-        <div id="mobile-menu" class="md:hidden hidden bg-white bg-opacity-95 backdrop-blur-sm border-t border-gray-200">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <div id="mobile-menu" class="mobile-hidden bg-white shadow-lg border-t border-gray-200 w-full">
+            <div class="px-4 pt-2 pb-3 space-y-1">
                 <?php foreach ($navigation as $name => $url): ?>
                     <?php if (is_array($url)): ?>
                         <!-- Mobile Services Dropdown -->
@@ -167,8 +233,9 @@ require_once 'config.php';
                                     <?php if ($subName === 'divider'): ?>
                                         <div class="border-t border-gray-200 my-2"></div>
                                     <?php else: ?>
-                                        <a href="<?php echo $subUrl; ?>" 
-                                           class="block px-3 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors">
+                                        <a href="<?php echo $subUrl; ?>"
+                                           class="block px-3 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors"
+                                           <?php if (isActivePage(ltrim($subUrl, '/'))) echo 'style="color:#667eea;border-left:4px solid #764ba2;background:rgba(118,75,162,0.07);"'; ?>>
                                             <?php echo $subName; ?>
                                         </a>
                                     <?php endif; ?>
@@ -177,7 +244,7 @@ require_once 'config.php';
                         </div>
                     <?php else: ?>
                         <a href="<?php echo $url; ?>" 
-                           class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors">
+                           class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors <?php echo ($url === '/' ? isActivePage('home') : isActivePage(basename($url))); ?>">
                             <?php echo $name; ?>
                         </a>
                     <?php endif; ?>

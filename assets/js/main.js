@@ -46,8 +46,11 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Mobile menu functionality
+    // Mobile menu functionality - DISABLED (handled in footer.php instead)
     function initMobileMenu() {
+        // This function is disabled to prevent conflicts with footer.php mobile menu code
+        console.log('Mobile menu init disabled - handled elsewhere');
+        /*
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
         
@@ -74,6 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             });
         }
+        */
     }
     
     // Back to top button

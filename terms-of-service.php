@@ -1,5 +1,5 @@
 <?php 
-$title = 'Terms of Service - CreatifyStudio';
+$title = 'Terms of Service - QRMMS';
 $page = 'terms-of-service';
 include 'includes/header.php'; 
 ?>
@@ -24,12 +24,12 @@ include 'includes/header.php';
 
             <h2 class="text-2xl font-bold text-gray-900 mb-4">Agreement to Terms</h2>
             <p class="text-gray-700 mb-8">
-                By accessing and using CreatifyStudio's services, you accept and agree to be bound by the terms 
+                By accessing and using QRMMS's services, you accept and agree to be bound by the terms 
                 and provision of this agreement.
             </p>
 
             <h2 class="text-2xl font-bold text-gray-900 mb-4">Services</h2>
-            <p class="text-gray-700 mb-6">CreatifyStudio provides:</p>
+            <p class="text-gray-700 mb-6">QRMMS provides:</p>
             <ul class="list-disc pl-6 mb-8 text-gray-700">
                 <li>Web development and design services</li>
                 <li>Graphic design services</li>
@@ -56,12 +56,12 @@ include 'includes/header.php';
             <h2 class="text-2xl font-bold text-gray-900 mb-4">Intellectual Property</h2>
             <p class="text-gray-700 mb-8">
                 Upon full payment, clients receive full ownership of custom work created specifically for them. 
-                CreatifyStudio retains the right to showcase work in portfolios and marketing materials.
+                QRMMS retains the right to showcase work in portfolios and marketing materials.
             </p>
 
             <h2 class="text-2xl font-bold text-gray-900 mb-4">Limitation of Liability</h2>
             <p class="text-gray-700 mb-8">
-                CreatifyStudio shall not be liable for any indirect, incidental, special, or consequential damages 
+                QRMMS shall not be liable for any indirect, incidental, special, or consequential damages 
                 resulting from the use of our services.
             </p>
 
@@ -76,7 +76,7 @@ include 'includes/header.php';
                 For questions about these terms, please contact us:
             </p>
             <ul class="list-none mb-8 text-gray-700">
-                <li>Email: creatifystudio168@gmail.com</li>
+                <li>Email: contact@qrmms.com</li>
                 <li>Phone: +855 69 71 21 21</li>
                 <li>Address: Siem Reap, Kingdom of Cambodia</li>
             </ul>
