@@ -19,12 +19,12 @@ $email_config = [
     
     // Email settings
     'from_email' => 'your-email@gmail.com', // Your email
-    'from_name' => 'QRMMS Contact Form',
-    'reply_to' => 'contact@qrmms.com',
+    'from_name' => 'POS by CHEM Contact Form',
+    'reply_to' => 'contact@posbychem.com',
     
     // Recipient
-    'to_email' => 'contact@qrmms.com',
-    'to_name' => 'QRMMS Team'
+    'to_email' => 'contact@posbychem.com',
+    'to_name' => 'POS by CHEM Team'
 ];
 
 /**
@@ -134,7 +134,7 @@ function generateEmailHTML($form_data) {
         <div class="container">
             <div class="header">
                 <h2>New Contact Form Submission</h2>
-                <p>QRMMS Website</p>
+                <p>POS by CHEM Website</p>
             </div>
             <div class="content">
                 <div class="field">
@@ -172,7 +172,7 @@ function generateEmailHTML($form_data) {
  */
 function generateEmailText($form_data) {
     $text = "NEW CONTACT FORM SUBMISSION\n";
-    $text .= "QRMMS Website\n";
+    $text .= "POS by CHEM Website\n";
     $text .= str_repeat("=", 40) . "\n\n";
     
     $text .= "Name: " . $form_data['name'] . "\n";

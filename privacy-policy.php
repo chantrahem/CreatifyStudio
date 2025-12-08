@@ -1,5 +1,5 @@
 <?php 
-$title = 'Privacy Policy - QRMMS';
+$title = 'Privacy Policy - POS by CHEM';
 $page = 'privacy-policy';
 include 'includes/header.php'; 
 ?>
@@ -67,7 +67,7 @@ include 'includes/header.php';
                 If you have any questions about this Privacy Policy, please contact us:
             </p>
             <ul class="list-none mb-8 text-gray-700">
-                <li>Email: contact@qrmms.com</li>
+                <li>Email: contact@posbychem.com</li>
                 <li>Phone: +855 69 71 21 21</li>
                 <li>Address: Siem Reap, Kingdom of Cambodia</li>
             </ul>

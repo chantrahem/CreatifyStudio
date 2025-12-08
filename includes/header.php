@@ -144,7 +144,7 @@ require_once 'config.php';
                 <!-- Logo -->
                 <div class="flex items-center">
                     <a href="/" class="flex items-center space-x-3">
-                        <img src="/assets/images/favicon.ico" alt="QRMMS Logo" class="w-10 h-10">
+                        <img src="/assets/images/favicon.ico" alt="POS by CHEM Logo" class="w-10 h-10">
                         <span class="text-xl font-bold text-gray-900"><?php echo SITE_NAME; ?></span>
                     </a>
                 </div>

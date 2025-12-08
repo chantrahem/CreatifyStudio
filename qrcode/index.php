@@ -10,7 +10,7 @@
   <meta property="og:description" content="Generate a free QR code for your WiFi password. Instantly share secure WiFi access with guests, friends, or customers using our easy QR code generator." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="/assets/images/og-image.jpg" />
-  <meta property="og:url" content="https://www.qrmms.com/qrcode/index.php" />
+  <meta property="og:url" content="https://www.posbychem.com/qrcode/index.php" />
   <link href="/css/style.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>

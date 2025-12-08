@@ -1,6 +1,6 @@
 <?php
 /**
- * Simple Email Handler for QRMMS
+ * Simple Email Handler for POS by CHEM
  * Works with PHP mail() function and PHPMailer (if available)
  */
 
@@ -40,8 +40,8 @@ function sendEmailWithPHPMailer($form_data) {
         $mail->Port = 587;
         
         // Recipients
-        $mail->setFrom('your-email@gmail.com', 'QRMMS Contact Form');
-        $mail->addAddress('contact@qrmms.com', 'QRMMS Team');
+        $mail->setFrom('your-email@gmail.com', 'POS by CHEM Contact Form');
+        $mail->addAddress('contact@posbychem.com', 'POS by CHEM Team');
         $mail->addReplyTo($form_data['email'], $form_data['name']);
         
         // Content
@@ -67,13 +67,13 @@ function sendEmailWithPHP($form_data) {
     // Configure SMTP settings for PHP mail()
     ini_set('SMTP', 'smtp.gmail.com');
     ini_set('smtp_port', '587');
-    ini_set('sendmail_from', 'noreply@qrmms.com');
+    ini_set('sendmail_from', 'noreply@posbychem.com');
     
-    $to = defined('SITE_EMAIL') ? SITE_EMAIL : 'contact@qrmms.com';
+    $to = defined('SITE_EMAIL') ? SITE_EMAIL : 'contact@posbychem.com';
     $subject = 'New Contact Form Submission from ' . $form_data['name'];
     $message = generateEmailText($form_data);
     
-    $from_email = defined('SITE_EMAIL') ? SITE_EMAIL : 'noreply@qrmms.com';
+    $from_email = defined('SITE_EMAIL') ? SITE_EMAIL : 'noreply@posbychem.com';
     $headers = "From: " . $from_email . "\r\n";
     $headers .= "Reply-To: " . $form_data['email'] . "\r\n";
     $headers .= "X-Mailer: PHP/" . phpversion() . "\r\n";
@@ -148,7 +148,7 @@ function generateEmailHTML($form_data) {
         <div class="container">
             <div class="header">
                 <h2>New Contact Form Submission</h2>
-                <p>QRMMS Website</p>
+                <p>POS by CHEM Website</p>
             </div>
             <div class="content">
                 <div class="field"><strong>Name:</strong> ' . htmlspecialchars($form_data['name']) . '</div>
@@ -173,7 +173,7 @@ function generateEmailHTML($form_data) {
  */
 function generateEmailText($form_data) {
     $text = "NEW CONTACT FORM SUBMISSION\n";
-    $text .= "QRMMS Website\n";
+    $text .= "POS by CHEM Website\n";
     $text .= str_repeat("=", 40) . "\n\n";
     
     $text .= "Name: " . $form_data['name'] . "\n";

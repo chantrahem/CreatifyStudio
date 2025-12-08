@@ -1,5 +1,5 @@
 <?php 
-$title = 'Thank You - QRMMS';
+$title = 'Thank You - POS by CHEM';
 $page = 'thank-you';
 include 'includes/config.php';
 include 'includes/header.php';
@@ -27,7 +27,7 @@ $name = $_GET['name'] ?? 'there';
                 </h1>
                 
                 <p class="text-xl md:text-2xl text-green-100 mb-8 animate-fade-in-delay">
-                    Your message has been sent successfully. We appreciate you reaching out to QRMMS!
+                    Your message has been sent successfully. We appreciate you reaching out to POS by CHEM!
                 </p>
                 
                 <div class="bg-white bg-opacity-10 rounded-lg p-8 mb-12 animate-slide-up">
@@ -67,7 +67,7 @@ $name = $_GET['name'] ?? 'there';
                 
                 <h1 class="text-4xl md:text-6xl font-bold mb-6">Thank You!</h1>
                 <p class="text-xl md:text-2xl text-blue-100 mb-8">
-                    We appreciate your interest in QRMMS.
+                    We appreciate your interest in POS by CHEM.
                 </p>
             <?php endif; ?>
             

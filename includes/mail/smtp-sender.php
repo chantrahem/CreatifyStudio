@@ -1,6 +1,6 @@
 <?php
 /**
- * Simple SMTP Email Sender for QRMMS
+ * Simple SMTP Email Sender for POS by CHEM
  * Works without PHPMailer using PHP sockets
  */
 
@@ -12,10 +12,10 @@ function sendEmailViaSMTP($form_data) {
     $smtp_config = [
         'host' => 'smtp.gmail.com',
         'port' => 587,
-        'username' => 'alertemail168@gmail.com',
-        'password' => 'skozmvmlolzuulrf',
-        'from_email' => 'alertemail168@gmail.com',
-        'from_name' => 'QRMMS Contact Form',
+        'username' => 'contactqrmms@gmail.com',
+        'password' => 'ljheqvqihttmlrmg',
+        'from_email' => 'contactqrmms@gmail.com',
+        'from_name' => 'POS by CHEM Contact Form',
         'to_email' => SITE_EMAIL // Send to configured site email
     ];
     

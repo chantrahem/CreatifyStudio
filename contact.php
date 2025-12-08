@@ -73,7 +73,7 @@ $selected_service = $_GET['service'] ?? '';
 
 // Set page variables
 $page_title = "Contact Us";
-$meta_description = "Get in touch with QRMMS for your web development, graphic design, and hosting needs. Free consultation and competitive pricing.";
+$meta_description = "Get in touch with POS by CHEM for POS systems, web development, and hosting needs. Free consultation and competitive pricing.";
 
 // Now safe to include header
 include 'includes/header.php';

@@ -75,7 +75,7 @@ include 'includes/header.php';
 <section class="py-20 bg-gray-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16 animate-on-scroll">
-                        <h2 class="text-3xl font-bold text-gray-900 mb-4">Why Choose QRMMS?</h2>
+                        <h2 class="text-3xl font-bold text-gray-900 mb-4">Why Choose POS by CHEM?</h2>
             <p class="text-xl text-gray-600">What sets us apart in the digital landscape</p>
         </div>
         

@@ -33,6 +33,9 @@ include 'includes/header.php';
             <button class="filter-btn px-6 py-3 rounded-full font-semibold transition-all" data-filter="graphic-design">
                 Graphic Design
             </button>
+            <button class="filter-btn px-6 py-3 rounded-full font-semibold transition-all" data-filter="domain-hosting">
+                Domain & Hosting
+            </button>
         </div>
     </div>
 </section>
@@ -70,7 +73,8 @@ include 'includes/header.php';
                             $categoryBadges = [
                                 'qr-menu-system' => ['label' => 'QR Menu System', 'color' => 'bg-green-100 text-green-800'],
                                 'web-development' => ['label' => 'Web Development', 'color' => 'bg-blue-100 text-blue-800'],
-                                'graphic-design' => ['label' => 'Graphic Design', 'color' => 'bg-purple-100 text-purple-800']
+                                'graphic-design' => ['label' => 'Graphic Design', 'color' => 'bg-purple-100 text-purple-800'],
+                                'domain-hosting' => ['label' => 'Domain & Hosting', 'color' => 'bg-yellow-100 text-yellow-800']
                             ];
                             $categories = explode(' ', $project['category']);
                             foreach ($categories as $cat):

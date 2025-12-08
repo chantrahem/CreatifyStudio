@@ -19,7 +19,9 @@ $service = $services['domain-hosting'];
                 <?php echo $service['description']; ?>
             </p>
             <p class="text-3xl font-bold text-yellow-300 mb-8">Starting at <?php echo $service['pricing_from']; ?></p>
-            <a href="/contact.php?service=domain-hosting" 
+            <a href="https://ifastnet.com/portal/aff.php?aff=31319" 
+               target="_blank"
+               rel="noopener"
                class="bg-white text-purple-600 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all transform hover:scale-105">
                 Get Hosting Now
             </a>
@@ -71,7 +73,9 @@ $service = $services['domain-hosting'];
                     </li>
                 </ul>
                 
-                <a href="/contact.php?service=shared-hosting" 
+                <a href="https://ifastnet.com/portal/aff.php?aff=31319" 
+                   target="_blank"
+                   rel="noopener"
                    class="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-full hover:from-blue-700 hover:to-purple-700 transition-all font-semibold text-center block">
                     Get Started
                 </a>
@@ -120,7 +124,9 @@ $service = $services['domain-hosting'];
                     </li>
                 </ul>
                 
-                <a href="/contact.php?service=vps-hosting" 
+                <a href="https://ifastnet.com/portal/aff.php?aff=31319" 
+                   target="_blank"
+                   rel="noopener"
                    class="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 rounded-full hover:from-purple-700 hover:to-blue-700 transition-all font-semibold text-center block">
                     Get Started
                 </a>
@@ -165,7 +171,9 @@ $service = $services['domain-hosting'];
                     </li>
                 </ul>
                 
-                <a href="/contact.php?service=dedicated-hosting" 
+                <a href="https://ifastnet.com/portal/aff.php?aff=31319" 
+                   target="_blank"
+                   rel="noopener"
                    class="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-full hover:from-blue-700 hover:to-purple-700 transition-all font-semibold text-center block">
                     Get Started
                 </a>
@@ -251,7 +259,9 @@ $service = $services['domain-hosting'];
                     </div>
                 </div>
                 
-                <a href="/contact.php?service=domain-hosting" 
+                <a href="https://ifastnet.com/portal/aff.php?aff=31319" 
+                   target="_blank"
+                   rel="noopener"
                    class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-full hover:from-blue-700 hover:to-purple-700 transition-all font-semibold">
                     Register Domain
                 </a>
@@ -310,6 +320,78 @@ $service = $services['domain-hosting'];
     </div>
 </section>
 
+<!-- Hosting Partner -->
+<section class="py-16 bg-white border-t border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-8 md:p-12 animate-on-scroll">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <div class="inline-flex items-center bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                        <i class="fas fa-handshake mr-2"></i>
+                        Trusted Hosting Partner
+                    </div>
+                    <h3 class="text-3xl font-bold text-gray-900 mb-4">Powered by iFastNet</h3>
+                    <p class="text-lg text-gray-600 mb-6">
+                        Our hosting services are powered by iFastNet, a leading hosting provider with over 15 years of experience. 
+                        Enjoy enterprise-grade infrastructure, 99.9% uptime guarantee, and lightning-fast performance for your websites.
+                    </p>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-center text-gray-700">
+                            <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                            <span>Enterprise-grade infrastructure</span>
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                            <span>99.9% uptime SLA guarantee</span>
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                            <span>24/7 technical support</span>
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                            <span>Global data centers</span>
+                        </li>
+                    </ul>
+                    <a href="https://ifastnet.com/portal/aff.php?aff=31319" 
+                       target="_blank" 
+                       rel="noopener"
+                       class="inline-flex items-center bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full hover:from-blue-700 hover:to-purple-700 transition-all font-semibold">
+                        Learn More About iFastNet
+                        <i class="fas fa-external-link-alt ml-2 text-sm"></i>
+                    </a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="bg-white rounded-xl p-8 shadow-lg">
+                        <div class="text-center mb-6">
+                            <i class="fas fa-server text-6xl text-gradient mb-4"></i>
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">Premium Hosting Infrastructure</h4>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-blue-50 rounded-lg p-4 text-center">
+                                <div class="text-2xl font-bold text-blue-600 mb-1">15+</div>
+                                <p class="text-sm text-gray-600">Years Experience</p>
+                            </div>
+                            <div class="bg-purple-50 rounded-lg p-4 text-center">
+                                <div class="text-2xl font-bold text-purple-600 mb-1">99.9%</div>
+                                <p class="text-sm text-gray-600">Uptime SLA</p>
+                            </div>
+                            <div class="bg-green-50 rounded-lg p-4 text-center">
+                                <div class="text-2xl font-bold text-green-600 mb-1">24/7</div>
+                                <p class="text-sm text-gray-600">Support</p>
+                            </div>
+                            <div class="bg-orange-50 rounded-lg p-4 text-center">
+                                <div class="text-2xl font-bold text-orange-600 mb-1">Global</div>
+                                <p class="text-sm text-gray-600">Network</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- CTA -->
 <section class="py-20 gradient-bg text-white relative overflow-hidden">
     <div class="absolute inset-0 bg-black opacity-20"></div>
@@ -319,11 +401,15 @@ $service = $services['domain-hosting'];
             Start your online journey with reliable hosting and domain services
         </p>
         <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-            <a href="/contact.php?service=domain-hosting" 
+            <a href="https://ifastnet.com/portal/aff.php?aff=31319" 
+               target="_blank"
+               rel="noopener"
                class="bg-white text-purple-600 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all">
                 Get Hosting Now
             </a>
-            <a href="/contact.php?service=domain-registration" 
+            <a href="https://ifastnet.com/portal/aff.php?aff=31319" 
+               target="_blank"
+               rel="noopener"
                class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-purple-600 transition-all">
                 Register Domain
             </a>

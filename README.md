@@ -1,4 +1,4 @@
-# QRMMS - Tailwind CSS Setup
+# POS by CHEM - Tailwind CSS Setup
 
 This project uses **Tailwind CSS v3.4.x** - the latest stable version.
 

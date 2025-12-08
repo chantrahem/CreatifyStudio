@@ -1,6 +1,6 @@
 <?php
 $page_title = "Home";
-$meta_description = "Professional web development, graphic design, domain and hosting services. Transform your business with QRMMS's quality digital solutions.";
+$meta_description = "Professional POS systems, web development, and digital services. Transform your business with POS by CHEM's quality solutions.";
 include 'includes/header.php';
 ?>
 
@@ -165,7 +165,7 @@ include 'includes/header.php';
                 </div>
                 
                 <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="https://t.me/qrcodemenu" 
+                    <a href="https://t.me/posbychem" 
                        class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all font-semibold inline-flex items-center justify-center transform hover:scale-105">
                         <i class="fab fa-telegram mr-3"></i>
                         Get Free Demo

@@ -1,6 +1,6 @@
 <?php
 $page_title = "About Us";
-$meta_description = "Learn about QRMMS - a quality resource management and marketing solutions company specializing in web development, graphic design, and digital services. Meet our team and discover our story.";
+$meta_description = "Learn about POS by CHEM - a point-of-sale and digital solutions company specializing in POS systems, web development, and design. Meet our team and discover our story.";
 include 'includes/header.php';
 ?>
 
@@ -9,7 +9,7 @@ include 'includes/header.php';
     <div class="absolute inset-0 bg-black opacity-20"></div>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="text-center animate-on-scroll">
-            <h1 class="text-4xl md:text-5xl font-bold mb-6">About QRMMS</h1>
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">About POS by CHEM</h1>
             <p class="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto">
                 We're passionate about creating digital solutions that help businesses thrive in the modern world
             </p>
@@ -24,7 +24,7 @@ include 'includes/header.php';
             <div class="animate-on-scroll">
                 <h2 class="text-3xl font-bold text-gray-900 mb-6">Our Story</h2>
                 <p class="text-lg text-gray-600 mb-6">
-                    Founded in <?php echo COMPANY_FOUNDED; ?>, QRMMS began as a small team of passionate professionals 
+                    Founded in <?php echo COMPANY_FOUNDED; ?>, POS by CHEM began as a small team of passionate professionals 
                     and designers with a simple mission: to help businesses succeed online with creative, 
                     effective digital solutions.
                 </p>
@@ -101,7 +101,7 @@ include 'includes/header.php';
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16 animate-on-scroll">
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Meet Our Team</h2>
-            <p class="text-xl text-gray-600">The talented people behind QRMMS</p>
+            <p class="text-xl text-gray-600">The talented people behind POS by CHEM</p>
         </div>
         
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -271,7 +271,7 @@ include 'includes/header.php';
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center animate-on-scroll">
         <h2 class="text-4xl font-bold mb-6">Ready to Work Together?</h2>
         <p class="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
-            Let's discuss how QRMMS can help transform your digital presence
+            Let's discuss how POS by CHEM can help transform your digital presence
         </p>
         <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
             <a href="/contact.php" 

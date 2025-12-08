@@ -1,24 +1,24 @@
 <?php
-// Configuration file for QRMMS
+// Configuration file for POS by CHEM
 
 // Site Information
-define('SITE_NAME', 'QRMMS');
+define('SITE_NAME', 'POS by CHEM');
 define('SITE_TAGLINE', 'Quality Resource Management & Marketing Solutions');
-define('SITE_URL', 'https://www.qrmms.com');
-define('SITE_EMAIL', 'contact@qrmms.com');
+define('SITE_URL', 'https://www.posbychem.com');
+define('SITE_EMAIL', 'contact@posbychem.com');
 define('SITE_PHONE', '+855 69 71 21 21');
 
 // Company Information
-define('COMPANY_NAME', 'QRMMS');
+define('COMPANY_NAME', 'POS by CHEM');
 define('COMPANY_ADDRESS', 'Siem Reap, Kingdom of Cambodia');
 define('COMPANY_FOUNDED', '2020');
 
 // Social Media Links
-define('SOCIAL_FACEBOOK', 'https://facebook.com/qrmms');
-define('SOCIAL_TWITTER', 'https://twitter.com/qrmms');
-define('SOCIAL_INSTAGRAM', 'https://instagram.com/qrmms');
-define('SOCIAL_LINKEDIN', 'https://linkedin.com/company/qrmms');
-define('SOCIAL_GITHUB', 'https://github.com/qrmms');
+define('SOCIAL_FACEBOOK', 'https://facebook.com/posbychem');
+define('SOCIAL_TWITTER', 'https://twitter.com/posbychem');
+define('SOCIAL_INSTAGRAM', 'https://instagram.com/posbychem');
+define('SOCIAL_LINKEDIN', 'https://linkedin.com/company/posbychem');
+define('SOCIAL_GITHUB', 'https://github.com/posbychem');
 
 // Services Configuration
 $services = [
@@ -138,14 +138,14 @@ $portfolio = [
     [
         'client' => 'Snaca Cafe',
         'type' => 'Coffee Shop',
-        'category' => 'qr-menu-system web-development graphic-design',
+        'category' => 'qr-menu-system web-development graphic-design domain-hosting',
         'image' => 'portfolio-snacacafe.jpg',
         'url' => 'https://snacacafe.com'
     ],
     [
         'client' => 'Miss Salmon',
         'type' => 'Japanese Food',
-        'category' => 'qr-menu-system web-development graphic-design',
+        'category' => 'qr-menu-system web-development graphic-design domain-hosting',
         'image' => 'portfolio-misssalmon.jpg',
         'url' => 'https://misssalmon.com'
     ],
@@ -183,12 +183,40 @@ $portfolio = [
         'category' => 'web-development',
         'image' => 'portfolio-srquadbike.jpg',
         'url' => 'https://srquadbikeadventure.com'
+    ],
+    [
+        'client' => 'Jeep Angkor Adventure',
+        'type' => 'Jeep Rental',
+        'category' => 'web-development domain-hosting',
+        'image' => 'jeep_angkor_adventure_logo.png',
+        'url' => 'https://jeepangkoradventure.com/'
+    ],
+    [
+        'client' => 'Active Green Quadbikes',
+        'type' => 'Quadbike Rental',
+        'category' => 'web-development domain-hosting',
+        'image' => 'active_green_logo.png',
+        'url' => 'https://activegreenquadbikes.com/'
+    ],
+    [
+        'client' => 'Blue & Chill Resort',
+        'type' => 'Hotel & Resort',
+        'category' => 'web-development domain-hosting',
+        'image' => 'blue_chill_resort.png',
+        'url' => 'https://blueandchill.com/'
+    ],
+    [
+        'client' => 'The Point',
+        'type' => 'Pub & Restaurant',
+        'category' => 'qr-menu-system',
+        'image' => 'the_point.jpg',
+        'url' => 'https://thepoint.snacacafe.com/'
     ]
 ];
 
 // Contact Form Settings
 define('CONTACT_EMAIL', SITE_EMAIL);
-define('CONTACT_SUBJECT_PREFIX', '[QRMMS Contact] ');
+define('CONTACT_SUBJECT_PREFIX', '[POS by CHEM Contact] ');
 
 // Error and Success Messages
 $messages = [

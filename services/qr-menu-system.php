@@ -1,6 +1,6 @@
 <?php
 $page_title = "QR Menu Management System";
-$meta_description = "Digital menu platform for restaurants, cafes, and bars. Save money on menu printing with QRMMS - clean responsive display, real-time updates, manage anywhere.";
+$meta_description = "Digital menu platform for restaurants, cafes, and bars. Save money on menu printing with POS by CHEM - clean responsive display, real-time updates, manage anywhere.";
 include '../includes/header.php';
 ?>
 
@@ -17,7 +17,7 @@ include '../includes/header.php';
                 Help restaurants, bars, coffee shops, and hotels save on significant costs for menu printing and graphic design
             </p>
             <div class="mt-8">
-                <a href="https://t.me/qrcodemenu" 
+                <a href="https://t.me/posbychem" 
                    class="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-semibold text-lg inline-flex items-center">
                     <i class="fab fa-telegram mr-3"></i>
                     Get a Free Demo
@@ -36,13 +36,13 @@ include '../includes/header.php';
                     Revolutionary Digital Menu Solution
                 </h2>
                 <p class="text-gray-600 mb-6 text-lg leading-relaxed">
-                    QRMMS is a digital menu platform designed for cafes, restaurants, and bars. The platform 
+                    POS by CHEM is a digital menu platform designed for cafes, restaurants, and bars. The platform 
                     provides an innovative solution that can help businesses save money on menu printing and 
                     graphic design by transitioning to a digital menu.
                 </p>
                 <p class="text-gray-600 mb-8 text-lg leading-relaxed">
                     Customers can easily access the menu by clicking on a menu link or scanning a QR code 
-                    with their smartphone camera. With QRMMS, managing the menu is made easy and accessible 
+                    with their smartphone camera. With POS by CHEM, managing the menu is made easy and accessible 
                     from anywhere at any time.
                 </p>
                 
@@ -104,6 +104,22 @@ include '../includes/header.php';
                                 <span>Print Receipt</span>
                             </div>
                             <div class="flex items-center">
+                                <i class="fas fa-box-open text-yellow-300 mr-4 text-xl"></i>
+                                <span>Inventory Management</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-file-invoice-dollar text-yellow-300 mr-4 text-xl"></i>
+                                <span>Accounts Receivable</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-file-invoice text-yellow-300 mr-4 text-xl"></i>
+                                <span>Accounts Payable</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-shopping-bag text-yellow-300 mr-4 text-xl"></i>
+                                <span>Online Order</span>
+                            </div>
+                            <div class="flex items-center">
                                 <i class="fas fa-language text-yellow-300 mr-4 text-xl"></i>
                                 <span>Multi-Language Support (Khmer, English, Chinese)</span>
                             </div>
@@ -163,9 +179,9 @@ include '../includes/header.php';
 <section class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16 animate-on-scroll">
-            <h2 class="text-3xl font-bold text-gray-900 mb-4">Why Choose QRMMS?</h2>
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Why Choose POS by CHEM?</h2>
             <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                The benefits that make QRMMS the perfect choice for your business
+                The benefits that make POS by CHEM the perfect choice for your business
             </p>
         </div>
         
@@ -270,11 +286,11 @@ include '../includes/header.php';
             Ready to Transform Your Menu Experience?
         </h2>
         <p class="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
-            Join hundreds of restaurants already saving money and delighting customers with QRMMS. 
+            Join hundreds of restaurants already saving money and delighting customers with POS by CHEM. 
             Contact us for a free demo and consultation.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="https://t.me/qrcodemenu" 
+            <a href="https://t.me/posbychem" 
                class="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-semibold inline-flex items-center justify-center">
                 <i class="fab fa-telegram mr-3"></i>
                 Get Free Demo
@@ -299,7 +315,7 @@ include '../includes/header.php';
                 </div>
                 <div class="flex items-center justify-center">
                     <i class="fas fa-envelope mr-2"></i>
-                    <span>info@qrmms.com</span>
+                    <span>info@posbychem.com</span>
                 </div>
             </div>
         </div>

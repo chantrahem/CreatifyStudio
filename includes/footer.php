@@ -7,7 +7,7 @@
                 <!-- Company Info -->
                 <div class="lg:col-span-2">
                     <div class="flex items-center space-x-3 mb-4">
-                        <img src="/assets/images/favicon.ico" alt="QRMMS Logo" class="w-10 h-10">
+                        <img src="/assets/images/favicon.ico" alt="POS by CHEM Logo" class="w-10 h-10">
                         <span class="text-xl font-bold"><?php echo SITE_NAME; ?></span>
                     </div>
                     <p class="text-gray-300 mb-4 max-w-md">
@@ -78,11 +78,23 @@
             
             <!-- Bottom Section -->
             <div class="border-t border-gray-800 mt-8 pt-8">
-                <div class="flex flex-col md:flex-row justify-between items-center">
-                    <p class="text-gray-300 text-sm">
-                        &copy; <?php echo date('Y'); ?> <?php echo COMPANY_NAME; ?>. All rights reserved.
-                    </p>
-                    <div class="flex space-x-6 mt-4 md:mt-0">
+                <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                    <div class="text-center md:text-left">
+                        <p class="text-gray-300 text-sm">
+                            &copy; <?php echo date('Y'); ?> <?php echo COMPANY_NAME; ?>. All rights reserved.
+                        </p>
+                        <p class="text-gray-400 text-xs mt-1">
+                            <i class="fas fa-server text-blue-400 mr-1"></i>
+                            Hosting powered by 
+                            <a href="https://ifastnet.com/portal/aff.php?aff=31319" 
+                               target="_blank" 
+                               rel="noopener"
+                               class="text-blue-400 hover:text-blue-300 transition-colors font-medium">
+                                iFastNet
+                            </a>
+                        </p>
+                    </div>
+                    <div class="flex space-x-6">
                         <a href="/privacy-policy.php" class="text-gray-300 hover:text-white text-sm transition-colors">
                             Privacy Policy
                         </a>
