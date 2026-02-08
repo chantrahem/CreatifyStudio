@@ -31,7 +31,7 @@ include 'includes/header.php';
                     <a href="/qrcode" 
                        class="bg-gradient-to-r from-green-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-green-600 hover:to-blue-700 transition-all flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-blue-500" aria-label="Generate Free WiFi QR Code">
                         <i class="fas fa-qrcode mr-3" aria-hidden="true"></i>
-                        Free WiFi QR Code Generator
+                        Free QR Code Generator
                     </a>
                 </div>
             </div>
